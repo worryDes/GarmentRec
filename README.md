@@ -4,8 +4,6 @@ Official implementation of **GarmentRec (IEEE TIP 2026): Individual Garment Reco
 
 ## Environment
 
-Create the conda environment using:
-
 ```bash
 conda env create -f environment.yml
 conda activate GarmentRec
@@ -17,25 +15,19 @@ The dataset introduced in our paper can be downloaded from:
 
 [Dataset Link]
 
-After downloading, organize the dataset according to the structure described in the paper.
+## Preparation
 
-## Pretrained Models
+Before inference, please download:
 
-Download the pretrained model and place it under:
+* Pretrained model weights
+* PCA garment templates
+* Other required assets
 
-```text
-./models/mrf_0.1_shading_0.1/
-```
+and place them in the corresponding folders.
+
+[Download Link]
 
 ## Inference
-
-Place input images in:
-
-```text
-./test_images
-```
-
-Run:
 
 ```bash
 python code/infer.py \
@@ -45,48 +37,24 @@ python code/infer.py \
     --output_folder ./Results/test_images
 ```
 
-### Normal Refinement (Optional)
-
-For normal refinement, additional dependencies are required. Please install them before running inference.
-
-Enable normal refinement by adding:
+For normal refinement, add:
 
 ```bash
 --normal_refine 1
 ```
 
-In this mode, each input image should be accompanied by:
-
-* Upper-garment mask:
-
-  ```text
-  xxx_mask_up.png
-  ```
-
-* Lower-garment mask:
-
-  ```text
-  xxx_mask_bottom.png
-  ```
-
-* Surface normal map:
-
-  ```text
-  xxx_normal.png
-  ```
-
-Example:
+and provide the following files for each image:
 
 ```text
-0001.png
-0001_mask_up.png
-0001_mask_bottom.png
-0001_normal.png
+xxx.png
+xxx_mask_up.png
+xxx_mask_bottom.png
+xxx_normal.png
 ```
 
 ## Output
 
-The reconstructed garment meshes and visualization results will be saved to:
+Results will be saved to:
 
 ```text
 ./Results/test_images
