@@ -2,6 +2,8 @@
 
 Official implementation of **GarmentRec (IEEE TIP 2026): Individual Garment Reconstruction from a Monocular Human Image**.
 
+📄 Paper: [Coming Soon]
+
 ## Environment
 
 ```bash id="q1m8zv"
