@@ -1,43 +1,67 @@
-# GarmentRec
+# 🧥 GarmentRec
 
-Official implementation of **GarmentRec (IEEE TIP 2026): Individual Garment Reconstruction from a Monocular Human Image**.
+Official implementation of **GarmentRec (IEEE TIP 2026): Individual Garment Reconstruction from a Monocular Human Image**
 
-📄 Paper: [Coming Soon]
+📄 **Paper:** [Coming Soon]
 
-## Environment
+---
 
-```bash id="q1m8zv"
+## ⚙️ Environment
+
+```bash id="env2"
 conda env create -f environment.yml
 conda activate GarmentRec
 ```
 
-## Dataset
+---
 
-The dataset introduced in our paper can be downloaded from:
+## 📦 Dataset
 
-[Dataset Link]
+The dataset introduced in our paper will be released soon.
 
-## Preparation
+👉 [Dataset Link]
 
-Download the required assets from:
+---
 
-* [Google Drive](https://drive.google.com/file/d/1PTbfEMchwgHpaL3y8Gm1__sbzFLqfoYj/view?usp=drive_link)
+## 🛠️ Preparation
 
-and extract them under `data/`.
+Download required assets:
 
-Please follow the instructions in `smpl_pytorch/README.md` to download SMPL models and put them under `smpl_pytorch/model/`.
+* 📥 [Google Drive](https://drive.google.com/file/d/1PTbfEMchwgHpaL3y8Gm1__sbzFLqfoYj/view?usp=drive_link)
 
-## Pretrained Models
+Place them under:
 
-Download the pretrained model from:
+```text id="prep1"
+data/
+```
 
-* [Google Drive](https://drive.google.com/file/d/1EF_BnrsZ0Zk53IVLCaa00xSmLdaPXFcF/view?usp=sharing)
+For SMPL models, please follow instructions in `smpl_pytorch/README.md` and place them under:
 
-and place it under the `models/` directory.
+```text id="prep2"
+smpl_pytorch/model/
+```
 
-## Inference
+---
 
-```bash id="n4k9xa"
+## 🧠 Pretrained Models
+
+Download pretrained weights:
+
+* 📥 [Google Drive](https://drive.google.com/file/d/1EF_BnrsZ0Zk53IVLCaa00xSmLdaPXFcF/view?usp=sharing)
+
+Place them under:
+
+```text id="model1"
+models/
+```
+
+---
+
+## 🚀 Inference
+
+### Standard inference
+
+```bash id="inf2"
 python code/infer.py \
     --model_path ./models/mrf_0.1_shading_0.1/mrf_0.1_shading_0.1_pca64_ep100_bth0.pth \
     --displacement_scale 0.005 \
@@ -45,32 +69,40 @@ python code/infer.py \
     --output_folder ./Results/test_images
 ```
 
-For normal refinement, add:
+---
 
-```bash id="z8v3cq"
+### ✨ Normal Refinement (optional)
+
+Add:
+
+```bash id="nr3"
 --normal_refine 1
 ```
 
-and provide:
+Input per image:
 
-```text id="t2k6pd"
+```text id="nr4"
 xxx.png
 xxx_mask_up.png
 xxx_mask_bottom.png
 xxx_normal.png
 ```
 
-## Output
+---
+
+## 📤 Output
 
 Results will be saved to:
 
-```text id="f7m2lw"
-./Results/test_images
+```text id="out2"
+Results/test_images/
 ```
 
-## Citation
+---
 
-```bibtex id="c9r1hx"
+## 📚 Citation
+
+```bibtex id="bib2"
 @article{GarmentRec2026,
   title={Individual Garment Reconstruction from a Monocular Human Image},
   author={...},
