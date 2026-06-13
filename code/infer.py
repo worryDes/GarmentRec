@@ -38,12 +38,14 @@ if __name__ == '__main__':
     parser.add_argument('--midpair_path', type=str, default="./data/midpairs.pkl")
     parser.add_argument('--dense_midpair_path', type=str, default="./data/dense_midpairs.pkl")
     parser.add_argument('--dense_template_folder', type=str, default="./data")
+    parser.add_argument('--pca_folder', type=str, default="./data/tmps")
     args = parser.parse_args()
 
     smpl_model_path = args.smpl_model_path
     midpair_path = args.midpair_path
     dense_midpair_path = args.dense_midpair_path
     dense_template_folder = args.dense_template_folder
+    pca_folder = args.pca_folder
     displacement_scale = args.displacement_scale
 
     if args.gpu == None:
@@ -96,7 +98,6 @@ if __name__ == '__main__':
     garments = ['T-shirt', 'front_open_T-shirt', 'Shirt', 'front_open_Shirt', 'Shorts', 'Pants']
     garmentvnums = [1954, 1954, 2468, 2468, 678, 1180]
     upper_type_num = 4
-    pca_folder = '/data/gz/D3G/Datasets/D3G_and_SIZER/tmps'
     pca_dim = 64
     gar_vnums_gt = [1954, 1954, 2468, 2468, 678, 1180]
 
