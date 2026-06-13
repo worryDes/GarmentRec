@@ -29,7 +29,11 @@ Please follow the instructions in `smpl_pytorch/README.md` to download SMPL mode
 
 ## Pretrained Models
 
-[Coming Soon]
+Download the pretrained model from:
+
+* [Google Drive](https://drive.google.com/file/d/1EF_BnrsZ0Zk53IVLCaa00xSmLdaPXFcF/view?usp=sharing)
+
+and place it under the `models/` directory.
 
 ## Inference
 
