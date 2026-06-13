@@ -17,15 +17,19 @@ The dataset introduced in our paper can be downloaded from:
 
 ## Preparation
 
-Before inference, please download:
+Download the required assets from:
 
-* Pretrained model weights
-* PCA garment templates
-* Other required assets
+* [Google Drive](https://drive.google.com/file/d/1PTbfEMchwgHpaL3y8Gm1__sbzFLqfoYj/view?usp=drive_link)
 
-and place them in the corresponding folders.
+Extract the downloaded archive and place the contents under:
 
-[Download Link]
+```text
+./data
+```
+
+## Pretrained Models
+
+[Coming Soon]
 
 ## Inference
 
@@ -43,7 +47,7 @@ For normal refinement, add:
 --normal_refine 1
 ```
 
-and provide the following files for each image:
+and provide:
 
 ```text
 xxx.png
