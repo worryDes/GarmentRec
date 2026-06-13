@@ -1,4 +1,4 @@
-# 🧥 GarmentRec
+## GarmentRec
 
 Official implementation of **GarmentRec (IEEE TIP 2026): Individual Garment Reconstruction from a Monocular Human Image**
 
